@@ -1,0 +1,154 @@
+Delivered-To: deivendranbr@gmail.com
+Received: by 2002:a98:8106:0:b0:226:390d:c0ae with SMTP id 6csp1277472eie;
+        Sat, 22 Mar 2025 23:39:23 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEGya8eu8QlTwPnvNcPAtcfsJ2NqAg60rW0MwARgBg/wsx7c1bMi9GkP3cK2cacdt6BBEnJ
+X-Received: by 2002:a05:6a00:808:b0:736:55ec:ea94 with SMTP id d2e1a72fcca58-73905a5255dmr16314338b3a.20.1742711963494;
+        Sat, 22 Mar 2025 23:39:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742711963; cv=none;
+        d=google.com; s=arc-20240605;
+        b=cusyGQy4LrZJ0/fxvaTVBUtTzOvjxl2MKsoJHcFMxc00XxaRu2uQleAZVj/avPwhnL
+         s5ShS6Tqflbd65X+KKDPDAkldJx2Cs4xfYiAHQBy4wAXqibViJDEkY9Gvd8k2XSPO1fC
+         vvVRMk7SRJ3rzg6xhTLpwz5GXtCIvul/zDvh0d1Jc80AIq6GvbYEVKJPNMHLHXeRWZ+I
+         MImMzGXbjspFVciwmK68MSsc7BCrPAwMt9D1oM1OEi7D8Y1OFrJ/SoGeOboCvaXfbpoN
+         IjGxjATCKaCx3yGn62bI69EGsahYKvAx5hjlL+6nwJZy4KBguKVtGLIrYYukfhWMTFfg
+         TKTA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe:feedback-id:envelope-to:delivery-date:nrk:rowkey
+         :precedence:auto-submitted:content-transfer-encoding:mime-version
+         :date:subject:to:from:reply-to:message-id:dkim-signature:dkim-filter;
+        bh=d5ZTarDdS40Fxe2IgdDO5JdkcjJC4goPzWUQHP8tcfg=;
+        fh=aXInMEv1WBwc5lWuysYZ+dIah2HQGJ8vAPozpOW8fLw=;
+        b=OQoMoaxeoMPjBJaFJyAzYN+P8RPMOW1dsda/a/C+Up0A2+nDxi74INPSrMTZZombgj
+         3vizSHTQyoPDYTk3TVW9TkDWK5Fe4JI5xFjovgSQt9p0FCUEg+E9LQT0bQZTQQqHMa2c
+         +4sWDVT0erH50wwpLlHUbmRboS+NABqbfyBEaOJEJEgNwxB2y7koVq1iDnVwaTpMl2hj
+         4e1crUUaMI+v2nL5wuhJrc72Zp58yPtZ5/5lwBQPvTW8/PS7gm4ScI87J79KcuCrNLTy
+         vMkmoN+GjO5EIgLb81UgcECly8M+QBRI+N7h+XHD20ns4ivuAa0DWWUVaeGtVazhnF/W
+         zq5w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@hdfcbank.net header.s=mail2 header.b=q6ycXXdI;
+       spf=pass (google.com: domain of edm-00huefydyjvb5o5ko@res11197.promo.rslti.com designates 103.108.11.200 as permitted sender) smtp.mailfrom=edm-00hUeFyDyJVB5O5KO@res11197.promo.rslti.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hdfcbank.net
+Return-Path: <edm-00hUeFyDyJVB5O5KO@res11197.promo.rslti.com>
+Received: from res11200.promo.rslti.com (res11200.promo.rslti.com. [103.108.11.200])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-73905ee8000si9270730b3a.33.2025.03.22.23.39.22
+        for <deivendranbr@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 22 Mar 2025 23:39:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of edm-00huefydyjvb5o5ko@res11197.promo.rslti.com designates 103.108.11.200 as permitted sender) client-ip=103.108.11.200;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hdfcbank.net header.s=mail2 header.b=q6ycXXdI;
+       spf=pass (google.com: domain of edm-00huefydyjvb5o5ko@res11197.promo.rslti.com designates 103.108.11.200 as permitted sender) smtp.mailfrom=edm-00hUeFyDyJVB5O5KO@res11197.promo.rslti.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hdfcbank.net
+Received: from hue-campsvr1.domain (245.184.93.34.bc.googleusercontent.com [34.93.184.245])
+	by res11197.promo.rslti.com (Postfix) with ESMTPSA id 6FCFFC18B14D
+	for <deivendranbr@gmail.com>; Sun, 23 Mar 2025 12:09:21 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 res11197.promo.rslti.com 6FCFFC18B14D
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=hdfcbank.net;
+	s=mail2; t=1742711961;
+	bh=hpUgEh3cmdQKYPhWazZ/yOhbajKwtSpV1KduVrvOQrw=;
+	h=Message-ID:From:To:Subject:Date:From:Sender:To:CC:Subject:
+	 Message-Id:Date;
+	b=q6ycXXdIqeFKMNCF7ZiptsnEFzpmBi6SL4jy80xuUSisNgKL0eTQMMstC5IFZHagX
+	 E8YsP0lTtIVqiPT3v8+GFio4mr6zuTrz2mEoNUvbcRZlUek9Wmfyr/0w01mnMAEPvF
+	 K4UTDcaggP0p+9YYLxeY/xlPrMrYQJRyDfG/+e344Z3WYRxqyjt/SLx3Lzrjm7/V3F
+	 p2f83TeG8HAaOe8kfjJEwLXkLZIsIqng5xud8eae0+OBa2uVBMusztgzxEmz+Kej3V
+	 Y3hStr8r7WnP7EaWfqmvAQudnyxcM5Me8d8+DE2eS3O71HYtM+IJkm8ITSOqJ6JybW
+	 KzithOiXWRHqg==
+Message-ID: <9474abc9629996c315abc77811ee8cfb@hdfcbank.net>
+Reply-To: HDFC Bank <information@hdfcbank.net>
+From: HDFC Bank <information@hdfcbank.net>
+To: <deivendranbr@gmail.com>
+Subject: =General Inquiry?utf-8?B?8J+YjCBQZWFjZSBvZiBNaW5kOiBZb3VyIEhlYWx0aCBJbnN1?=
+	=?utf-8?B?cmFuY2UgU29sdXRpb24g4piu77iP?=
+Date: Sun, 23 Mar 2025 02:39:20 -0400
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Auto-Submitted: auto-generated
+Precedence: bulk
+RowKey: camp-00b4e220-6121-4a93-a63f-d0848bd73506_e2572614-745d-4f00-9173-3bd2dc2a9b1c_B5O5KO_dbf4923d-e294-41af-b57f-2157289b6475_20250323023920
+NRK: 00hUeFyDyJVB5O5KO
+Delivery-date: 3/23/2025 12:00:00 AM
+Envelope-to: information@hdfcbank.net
+X-Priority: 3
+Feedback-ID: yDy:B5O5KO:JV:hUe
+List-Unsubscribe: <refr=c12ATNzcDZihDN4ADZfZ2M2E2XzkTY08VMyEjNfBjMyUGNiBDMnNWMgc1&bid=2&curl=ZGJmNDkyM2QtZTI5NC00MWFmLWI1N2YtMjE1NzI4OWI2NDc1&sch=ZTI1NzI2MTQtNzQ1ZC00ZjAwLTkxNzMtM2JkMmRjMmE5YjFj&rid=B5O5KO&pid=B5O5KO&bkey=23u&resul=hUe_Rl95RHlfZW1fSlZfQjVPNUtP&utm_source=Resulticks_web&utm_medium=comm&utm_campaign=yDy&campname=SElfMQ==&blid=001>
+X-Abuse-Reports-To: <refr=c12ATNzcDZihDN4ADZfZ2M2E2XzkTY08VMyEjNfBjMyUGNiBDMnNWMgc1&bid=2&curl=ZGJmNDkyM2QtZTI5NC00MWFmLWI1N2YtMjE1NzI4OWI2NDc1&sch=ZTI1NzI2MTQtNzQ1ZC00ZjAwLTkxNzMtM2JkMmRjMmE5YjFj&rid=B5O5KO&pid=B5O5KO&bkey=23u&resul=hUe_Rl95RHlfZW1fSlZfQjVPNUtP&utm_source=Resulticks_web&utm_medium=comm&utm_campaign=yDy&campname=SElfMQ==&blid=001>
+
+<html><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cent=
+er"><tr><td><!DOCTYPE HTML>=0D=0A=0D=0A        =0D=0A=0D=0A        =0D=0A=
+=0D=0A=0D=0A<meta charset=3D"UTF-8">=0D=0A<title>Mailer Tax Savings</title>=
+=0D=0A<style type=3D"text/css">=0D=0Abody {=0D=0A=09margin-left: 0px;=0D=0A=
+=09margin-top: 0px;=0D=0A=09margin-right: 0px;=0D=0A=09margin-bottom: 0px;=
+=0D=0A}=0D=0Aa:link{ text-decoration:none;}=0D=0A</style>=0D=0A=0D=0A=0D=0A=
+<div class=3D"hide"><div style=3D'display: none; max-height: 0px; height:0p=
+x; overflow: hidden; font-size:0px !important; color:transprent; line-heigh=
+t:0px;mso-hide:all;max-width:0px;opacity:0;'>Can You Afford Unexpected Medi=
+cal Bills?=F0=9F=92=A1</div><div style=3D'display: none; max-height: 0px; o=
+verflow: hidden;'>&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;=
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div><table width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" align=3D"center"><tbody><tr><td><table alig=
+n=3D"center">=0D=0A    <tr>=0D=0A        <td align=3D"center">=0D=0A       =
+     <p  style=3D"font-size: 11px; color: #4C4C4C; padding:10px;line-height=
+:19px;">General Inquiry?  =0D=0A=09=09=09<a href=3D"https://=
+v.mailer.resulticks.net/EmailHeader/CampView?refr=3Dc12ATNzcDZihDN4ADZfZ2M2=
+E2XzkTY08VMyEjNfBjMyUGNiBDMnNWMgc1&bid=3D2&curl=3DZGJmNDkyM2QtZTI5NC00MWFmL=
+WI1N2YtMjE1NzI4OWI2NDc1&rid=3DB5O5KO&eid=3DdDktf63AQh7aZHpA9KUdaJM+vA3GOxPQ=
+JjymXhF1wGs=3D&sch=3DZTI1NzI2MTQtNzQ1ZC00ZjAwLTkxNzMtM2JkMmRjMmE5YjFj&pid=
+=3DB5O5KO&bkey=3D23u&resul=3DhUe_Rl95RHlfZW1fSlZfQjVPNUtP&jobId=3D671539&jo=
+bType=3DBulk&blid=3D001&subject=3D8J+YjCBQZWFjZSBvZiBNaW5kOiBZb3VyIEhlYWx0a=
+CBJbnN1cmFuY2UgU29sdXRpb24g4piu77iP&Split=3D&levelno=3D0&actionid=3D&parent=
+channelid=3D&channeldetailid=3D206369&token=3D1745303960452" class=3D"email=
+Text" target=3D"_blank" style=3D"color:#2E2E2E;text-decoration: underline;"=
+>View in Browser</a> </p>=0D=0A        </td>=0D=0A    </tr>=0D=0A</table></=
+td></tr></tbody></table></div>=0D=0A<table width=3D"800" cellspacing=3D"0" =
+cellpadding=3D"0" align=3D"center" border=3D"0" style=3D"background-color:#=
+ffffff; border:1px solid #bcbec0;">=0D=0A  <tbody>=0D=0A    <tr>=0D=0A     =
+ <td height=3D"1064" align=3D"left" valign=3D"top" bgcolor=3D"#f5f5f5"><a h=
+ref=3D"https://lcs.hdfcbk.io/EdmTrack/UrlRedirect?url=3DMjI0ZGM1MjAtYzg5OS0=
+0MTUwLWI1MDAtOWI5ODMyZTY2OGIy&refr=3Dc12ATNzcDZihDN4ADZfZ2M2E2XzkTY08VMyEjN=
+fBjMyUGNiBDMnNWMgc1&bid=3D2&curl=3DZGJmNDkyM2QtZTI5NC00MWFmLWI1N2YtMjE1NzI4=
+OWI2NDc1&sch=3DZTI1NzI2MTQtNzQ1ZC00ZjAwLTkxNzMtM2JkMmRjMmE5YjFj&rid=3DB5O5K=
+O&pid=3DB5O5KO&bkey=3D23u&resul=3DhUe_Rl95RHlfZW1fSlZfQjVPNUtP&utm_source=
+=3DResulticks_web&utm_medium=3Dcomm&utm_campaign=3DyDy&campname=3DSElfMQ=3D=
+=3D&blid=3D001" target=3D"_blank" class=3D"edmSLink" rel=3D"tooltip" data-o=
+riginal-title=3D"Mark as smart link" data-placement=3D"top"><img src=3D"htt=
+ps://cdn.resulticks.com/Uploads/Campaigns/edm/S/dbf4923d-e294-41af-b57f-215=
+7289b6475/39/images/header.jpg" width=3D"800" height=3D"1063" alt=3D"Mailer=
+ Image"></a></td>=0D=0A    </tr>=0D=0A=09<tr>=0D=0A          <td width=3D"7=
+29" style=3D"=0D=0A                          font-size: 13px;=0D=0A        =
+                  word-break: keep-all;=0D=0A                          padd=
+ing: 5px 10px 5px 10px;=0D=0A                          border: none;=0D=0A =
+                         font-family: sans-serif;=0D=0A                    =
+     =0D=0A                        "><center><p> Disclaimer: <a href=3D"htt=
+ps://lcs.hdfcbk.io/EdmTrack/UrlRedirect?url=3DMTY5ZDUzOGQtZTMwNy00OWVkLWFlY=
+jAtZTg4NGQ4ZmE1M2Qy&refr=3Dc12ATNzcDZihDN4ADZfZ2M2E2XzkTY08VMyEjNfBjMyUGNiB=
+DMnNWMgc1&bid=3D2&curl=3DZGJmNDkyM2QtZTI5NC00MWFmLWI1N2YtMjE1NzI4OWI2NDc1&s=
+ch=3DZTI1NzI2MTQtNzQ1ZC00ZjAwLTkxNzMtM2JkMmRjMmE5YjFj&rid=3DB5O5KO&pid=3DB5=
+O5KO&bkey=3D23u&resul=3DhUe_Rl95RHlfZW1fSlZfQjVPNUtP&utm_source=3DResultick=
+s_web&utm_medium=3Dcomm&utm_campaign=3DyDy&campname=3DSElfMQ=3D=3D&blid=3D0=
+01" target=3D"_blank" style=3D"text-decoration: underline" class=3D"edmSLin=
+k" rel=3D"tooltip" data-original-title=3D"Mark as smart link" data-placemen=
+t=3D"top"><span>Unsubscribe</span></a></p></center></td>=0D=0A        </tr>=
+=0D=0A    <tr>=0D=0A      <td align=3D"left" valign=3D"top"><img src=3D"htt=
+ps://cdn.resulticks.com/Uploads/Campaigns/edm/S/dbf4923d-e294-41af-b57f-215=
+7289b6475/39/images/footer.jpg" width=3D"800" height=3D"117" alt=3D""></td>=
+=0D=0A    </tr>  <tr>=0D=0A      <td align=3D"right" bgcolor=3D"#f1f3f3"><t=
+able width=3D"600" border=3D"0" align=3D"center" cellpadding=3D"0" cellspac=
+ing=3D"0">=0D=0A        <tbody>=0D=0A         =0D=0A        </tbody>=0D=0A =
+     </table></td>=0D=0A    </tr>=0D=0A  =0D=0A=0D=0A    =0D=0A    <tr>=0D=
+=0A     =0D=0A    </tr>=0D=0A   =0D=0A  =0D=0A =0D=0A   =0D=0A    =0D=0A   =
+ =0D=0A  </tbody>=0D=0A</table>=0D=0A<div id=3D'_t'></div><img alt=3D'' src=
+=3D'https://lco.resu.io/hUeFyDyEB5O5KOJVB_001PO' width=3D'1' height=3D'1' b=
+order=3D'0' /><style>@media print{ #_t { background-image: url('https://lco=
+.resu.io/hUeFyDyEB5O5KOJVB_001PO');}} div.OutlookMessageHeader {background-=
+image:url('https://lco.resu.io/hUeFyDyEB5O5KOJVB_001PO')} table.moz-email-h=
+eaders-table {background-image:url('https://lco.resu.io/hUeFyDyEB5O5KOJVB_0=
+01PO')} blockquote #_t {background-image:url('https://lco.resu.io/hUeFyDyEB=
+5O5KOJVB_001PO')} #MailContainerBody #_t {background-image:url('https://lco=
+.resu.io/hUeFyDyEB5O5KOJVB_001PO')}</style></body>=0D=0A=0D=0A=0D=0A    =0D=
+=0A    </td></tr><tr><td></td></tr></table></html>
+
